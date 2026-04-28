@@ -18,8 +18,9 @@
 2. Razac Mohamed
 3. Kelvin Mbizo
 4. Doreen Kamando
-5. Happnes Makin
+5. Happnes Makinu
 6. Enock Paulo
+7. Ilham Lusinde
 
 ---
 
