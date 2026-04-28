@@ -39,9 +39,7 @@ In this project, the following tasks were successfully completed:
 
 During the development of this project, several challenges were encountered:
 
-- Understanding how to properly link multiple HTML pages together
 - Managing file paths for local images and ensuring they load correctly
-- Ensuring consistent navigation across all pages
 - Finding suitable and correctly formatted online images
 - Structuring content in a clean and readable way using basic HTML only
 

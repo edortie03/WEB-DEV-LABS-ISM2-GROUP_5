@@ -30,30 +30,9 @@
 - **Topic:** Introduction to HTML and Basic Page Structure
 - **Submission Date:** 28 April 2026
 
----
-
 ## 📝 Assignment Description
 
 This assignment focuses on building a basic static web page using HTML. The task involves creating a well-structured webpage that includes headings, paragraphs, images, links, and proper semantic layout.
-
----
-
-## 🎯 Objectives
-
-- Understand the structure of an HTML document
-- Apply semantic HTML elements
-- Create a clean and accessible webpage layout
-- Practice proper file organization for web projects
-
----
-
-## 🛠️ Technologies Used
-
-- HTML5
-- Basic CSS3 (for styling)
-- Git & GitHub (for version control and collaboration)
-
----
 
 ## ⚙️ How to Access and Use This Repository
 
