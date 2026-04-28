@@ -59,11 +59,12 @@ This assignment focuses on building a basic static web page using HTML. The task
 
 ### 1. Clone the Repository
 
-````bash
-git clone https://github.com/group-repo/is122-web-development.git
-``` id="v8t2fa"
+```bash
+git clone https://github.com/edortie03/WEB-DEV-LABS-ISM2-GROUP_5.git
+```
 
 ### 2. Navigate into the Project Folder
+
 ```bash
-cd is122-web-development
-````
+cd WEB-DEV-LABS-ISM2-GROUP_5
+```
