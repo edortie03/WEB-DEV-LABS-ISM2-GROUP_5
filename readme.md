@@ -24,11 +24,11 @@
 
 ---
 
-## 📅 Current Assignment
+## 📅 Assignment details
 
 - **Week:** Week 01
 - **Topic:** Introduction to HTML and Basic Page Structure
-- **Submission Date:** 30 April 2026
+- **Submission Date:** 28 April 2026
 
 ---
 
