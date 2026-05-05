@@ -4,7 +4,7 @@
 
 ---
 
-## 📚 Course Details
+## Course Details
 
 - **Course Code:** IS 224
 - **Course Title:** Web Development
@@ -12,7 +12,7 @@
 
 ---
 
-## 👥 Group Members
+## Group Members
 
 1. Edward Denis
 2. Razac Mohamed
@@ -24,9 +24,9 @@
 
 ---
 
-## 📅 Assignment details
+## Assignment details
 
-## 📅 Week one
+## Week one
 
 - **Topic:** Introduction to HTML and Basic Page Structure
 - **Submission Date:** 28 April 2026
@@ -34,7 +34,7 @@
 
 ---
 
-## ⚙️ How to Access and Use This Repository
+## How to Access and Use This Repository
 
 ### 1. Clone the Repository
 

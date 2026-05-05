@@ -1,12 +1,12 @@
-# 📱 Simple Social Media Platform (HTML Project)
+# Simple Social Media Platform (HTML Project)
 
-## 🎯 Objective
+## Objective
 
 The objective of this project was to design and develop a simple multi-page social media website using basic HTML concepts. The goal was to understand how web pages are structured, how navigation works between pages, and how to integrate multimedia and external resources into a website.
 
 ---
 
-## 🛠️ What Was Done
+## What Was Done
 
 In this project, the following tasks were successfully completed:
 
@@ -35,7 +35,7 @@ In this project, the following tasks were successfully completed:
 
 ---
 
-## ⚠️ Challenges Faced
+## Challenges Faced
 
 During the development of this project, several challenges were encountered:
 
@@ -45,7 +45,7 @@ During the development of this project, several challenges were encountered:
 
 ---
 
-## 👥 Members Participated
+## Members Participated
 
 The following group members contributed to this project:
 
@@ -59,8 +59,6 @@ The following group members contributed to this project:
 
 ---
 
-## 📌 Conclusion
+## Conclusion
 
 This project helped build a strong foundation in HTML by applying theoretical knowledge into practical development. It also improved understanding of website structure, navigation, and content organization.
-
----
