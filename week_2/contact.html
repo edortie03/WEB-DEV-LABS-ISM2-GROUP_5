@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Page</title>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav align="center">
+        <a href="index.html">Home</a> |
+        <a href="timetable.html">Timetable</a> |
+        <a href="contact.html">Contact</a>
+    </nav>
+    <br>
+    <!-- Part A: Basic Contact Form -->
+    <form>
+        <label>Name:</label><br>
+        <input type="text" required placeholder="Enter your name"><br><br>
+
+        <label>Email:</label><br>
+        <input type="email" required placeholder="Enter your email"><br><br>
+
+        <label>Message:</label><br>
+        <textarea rows="10" cols="50" required placeholder="Enter your message"></textarea><br><br>
+
+        <button type="submit">Submit</button>
+    </form>
+
+    <hr>
+
+    <!-- Part B: Registration Form inside Table -->
+    
+    <h2>Registration Form</h2>
+    <form>
+        <table border="1" cellpadding="10">
+            <caption>Student Registration Form</caption>
+            <tr>
+                <td>Full Name:</td>
+                <td><input type="text" required placeholder="Enter your name"></td>
+            </tr>
+
+            <tr>
+                <td>Email:</td>
+                <td><input type="email" required placeholder="Enter your email"></td>
+            </tr>
+
+            <tr>
+                <td>Password:</td>
+                <td><input type="password" required placeholder="Enter your password"></td>
+            </tr>
+
+            <tr>
+                <td>Gender:</td>
+                <td>
+                    <input type="radio" name="gender"> Male
+                    <input type="radio" name="gender"> Female
+                </td>
+            </tr>
+
+            <tr>
+                <td>Courses:</td>
+                <td>
+                    <input type="checkbox" name="courses"> HTML
+                    <input type="checkbox" name="course"> CSS
+                    <input type="checkbox" name="course"> JavaScript
+                </td>
+            </tr>
+
+            <tr>
+                <td colspan="2" align="center">
+                    <button type="submit">Register</button>
+                </td>
+            </tr>
+        </table>
+    </form>
+</body>
+</html>
