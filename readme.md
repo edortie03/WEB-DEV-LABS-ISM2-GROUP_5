@@ -24,16 +24,6 @@
 
 ---
 
-## Assignment details
-
-## Week one
-
-- **Topic:** Introduction to HTML and Basic Page Structure
-- **Submission Date:** 28 April 2026
-- **Assignment Description:** This assignment focuses on building a basic static web page using HTML. The task involves creating a well-structured webpage that includes headings, paragraphs, images, links, and proper semantic layout.
-
----
-
 ## How to Access and Use This Repository
 
 ### 1. Clone the Repository
