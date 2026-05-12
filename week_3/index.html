@@ -3,61 +3,86 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ISM Group 5</title>
-    <link rel="stylesheet" href="style.css">
-    <style>
+    <title>LAB WEEK 3</title>
 
+    <!-- External CSS -->
+    <link rel="stylesheet" href="style.css">
+
+    <!-- Internal CSS -->
+    <style>
+        nav {
+            background-color: #709cdd;
+            padding: 10px;
+            text-align: center;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin: 15px;
+            font-weight: bold;
+        }
+
+        nav a:hover {
+            color: rgb(5, 7, 105);
+        }
+
+        h2 {
+            color: darkblue;
+            border-bottom: 2px solid gray;
+            padding-bottom: 5px;
+        }
     </style>
 </head>
 <body>
-    <header>
-        <h2>Edward Denis</h2>
-        <p>A Junior software Engineer</p>
-    </header>
-    <nav class="navabar">
-        <ul>
-            <li><a href="#about">About Me </a></li>
-            <li><a href="#skills"> My Skills</a></li>
-            <li><a href="#routine"> My Daily routine</a></li>
-        </ul>
-    </nav>
-    <section id="about">
-        <h2>About Me</h2>
-        <p>
-           A passionate and dedicated Junior Software Engineer 
-           with a strong foundation in programming and software development. 
-           I have a keen interest in learning new technologies and 
-           applying my skills to solve real-world problems. 
-           With experience in various programming languages and frameworks, 
-           I am eager to contribute to innovative projects and collaborate with 
-           like-minded professionals in the tech industry.
-        </p>
-        <img src="images\Prof.jpeg" alt="edor-image">
-    </section>
-    <div class="skill">
-    <section id="skills">
-        <h2>My Skills</h2>
-            <li>Programming Languages: Python, JavaScript, Java</li>
-            <li>Web Development: HTML, CSS, React</li>
-            <li>Data Analysis: Pandas, NumPy, Matplotlib</li>
-            <li>Machine Learning: Scikit-learn, TensorFlow</li>
-            <li>Version Control: Git, GitHub</li>  
-    </section>
-    </div>
 
-    <div class="ratiba">
-    <section id="routine">
-        <h2>My Daily Routine</h2>
-        <ul>
-            <li>8:00 AM - Wake up and exercise</li>
-            <li>9:00 AM - Breakfast and review the day's tasks</li>
-            <li>10:00 AM - Work on group projects</li>
-            <li>12:00 PM - Lunch break</li>
-            <li>1:00 PM - Continue working on projects</li>
-            <li>3:00 PM - Attend meetings and discussions</li>
-            <li>5:00 PM - Wrap up work and plan for the next day</li>
+    <!-- Header -->
+    <header id="header">
+        <h1 style="color: rgb(5, 67, 126);">Edward Denis</h1>
+        <p style="font-style: italic;">Junior Software Engineer</p>
+    </header>
+
+    <!-- Navigation -->
+    <nav>
+        <a href="#about">About</a>
+        <a href="#skills">Skills</a>
+        <a href="#routine">Daily Routine</a>
+    </nav>
+
+    <!-- About Section -->
+    <section id="about" class="section">
+        <h2>About Me</h2>
+         <img src="images\Prof.jpeg" alt="Profile Image" style="border-radius: 50%; display: block; margin: 0 auto; width: 150px; height: 150px;">
+        <p style="text-align: center; font-size: 18px; color: #555;">
+            I am passionate about web development and learning modern technologies.
+            I enjoy building responsive and user-friendly websites.
+        </p>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" class="section">
+        <h2>Skills</h2>
+
+        <ul class="skills-list">
+            <li>HTML</li>
+            <li>CSS</li>
+            <li>JavaScript</li>
+            <li>Python</li>
+            <li>Git & GitHub</li>
+            <li>Responsive Design</li>
         </ul>
     </section>
-    </div>
+
+    <!-- Daily Routine Section -->
+    <section id="routine" class="section">
+        <h2>Daily Routine</h2>
+        <ol>
+            <li>Attend classes</li>
+            <li>Practice coding</li>
+            <li>Read web development materials</li>
+            <li>Work on assignments</li>
+        </ol>
+    </section>
+
 </body>
 </html>

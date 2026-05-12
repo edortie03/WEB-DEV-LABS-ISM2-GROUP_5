@@ -44,13 +44,13 @@ In this project, the following was done:
 
 ## Members Participated
 
-1. Edward Denis
-2. Razac Mohamed
-3. Kelvin Mbizo
-4. Doreen Kamando
-5. Happnes Makinu
-6. Enock Paulo
-7. Ilham Lusinde
+1. Edward Denis [32710/T.2024]
+2. Razac Mohamed [32505/T.2024]
+3. Kelvin Mbizo [32403/T.2024]
+4. Doreen Kamando [34609/T.2024]
+5. Happnes Makinu [33533/T.2024]
+6. Enock Paulo [34690/T.2024]
+7. Ilham Lusinde  [30667/T.2023]
 
 ---
 

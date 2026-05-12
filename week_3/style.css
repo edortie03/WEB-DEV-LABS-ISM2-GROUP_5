@@ -1,0 +1,32 @@
+/* Element Selector */
+body {
+    background-color: #d4e5ec;
+    font-family: Arial, sans-serif;
+    margin: 25px;
+}
+
+/* ID Selector */
+#header {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+/* Class Selector */
+.section {
+    background-color: white;
+    padding: 20px;
+    margin-bottom: 20px;
+    border-radius: 10px;
+}
+
+/* Element Selector */
+p {
+    font-size: 18px;
+    line-height: 1.6;
+}
+
+/* Class Selector */
+.skills-list li {
+    color: darkgreen;
+    margin: 5px 0;
+}
