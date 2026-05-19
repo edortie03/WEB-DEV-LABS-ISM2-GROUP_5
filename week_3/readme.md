@@ -65,4 +65,4 @@ In this project, the following was done:
 
 ## Conclusion
 
-This project helped to understand HTML page structure, CSS styling methods, selector types, and webpage organization using HTML and CSS. 
+This project helped to understand HTML page structure, CSS styling methods, selector types, and webpage organization using HTML and CSS.
