@@ -1,4 +1,4 @@
-# Week 4 Lab Activity - CSS Positioning & Float Layout (Tanzanian Foods Page)
+# Week 4 Lab Activity - CSS Positioning & Float Layout 
 
 ## Objective
 
@@ -6,7 +6,6 @@ The objective of this project was to practice CSS layout concepts using HTML and
 
 ## What Was Done
 
-* Created a Tanzanian foods webpage
 * Added a fixed header
 * Added a sticky navigation bar
 * Created main content and sidebar sections
