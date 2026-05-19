@@ -39,16 +39,7 @@ background: gray;
 padding: 20px;
 border-bottom: 10px solid blue;
 text-align: center;
- }
-
- nav a{
-    text-decoration: none;
-    color: white;
- }
-
- nav a:hover{
-    background-color: rgb(151, 148, 144);
-    color: blue
+color: white;
  }
 
 #content{
