@@ -4,8 +4,6 @@
 
 The E-Learning Course Management System is a modern Learning Management System (LMS) designed to facilitate online teaching and learning. The platform enables instructors to create and manage courses while allowing students to enroll, access learning materials, complete quizzes, and monitor their learning progress.
 
-The system is inspired by Cisco Networking Academy (NetAcad) and is developed with scalability, maintainability, and mobile responsiveness in mind.
-
 ---
 
 ## Objectives
@@ -81,19 +79,6 @@ Responsible for tracking learning progress.
 - Manage courses
 - Monitor platform activity
 - Generate reports
-
----
-
-## Database Summary
-
-Total Applications
-
-- Users
-- Courses
-- Quizzes
-- Progress
-
-Total Entities: 15
 
 ---
 
