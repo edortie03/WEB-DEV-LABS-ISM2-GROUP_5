@@ -1,0 +1,12 @@
+{% extends "base.html" %}
+{% block title %}New Course{% endblock %}
+{% block content %}
+<h1>New Course</h1>
+<form method="post" class="col-md-6" novalidate>
+    {% csrf_token %}
+    {% for field in form %}
+        {% include "includes/form_field.html" %}
+    {% endfor %}
+    <button type="submit" class="btn btn-primary">Create</button>
+</form>
+{% endblock %}

@@ -1,0 +1,14 @@
+{% extends "base.html" %}
+{% block title %}New Quiz{% endblock %}
+{% block content %}
+<h1>New Quiz for {{ course.title }}</h1>
+<form method="post" class="col-md-6" novalidate>
+    {% csrf_token %}
+    <div class="mb-3">
+        <label class="form-label" for="title">Quiz title <span class="required-marker" aria-hidden="true">*</span></label>
+        <input class="form-control" type="text" name="title" id="title" aria-required="true" required>
+    </div>
+    <button type="submit" class="btn btn-primary">Create</button>
+</form>
+<p class="mt-3 text-muted">Add questions and answer choices from the Django admin panel after creating the quiz.</p>
+{% endblock %}

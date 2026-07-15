@@ -1,0 +1,27 @@
+{% extends "base.html" %}
+{% block title %}Progress{% endblock %}
+{% block content %}
+<h1>Progress: {{ course.title }}</h1>
+<div class="progress mb-3" style="height: 25px;"
+     role="progressbar" aria-label="Course completion" aria-valuenow="{{ percent }}"
+     aria-valuemin="0" aria-valuemax="100">
+    <div class="progress-bar" style="width: {{ percent }}%;">{{ percent }}%</div>
+</div>
+<ul class="list-group mb-4">
+    {% for lesson in lessons %}
+    <li class="list-group-item">
+        {% if lesson.pk in completed_ids %}
+            <span aria-hidden="true">✅</span> {{ lesson.title }} <span class="visually-hidden">(completed)</span>
+        {% else %}
+            <span aria-hidden="true">⬜</span> {{ lesson.title }} <span class="visually-hidden">(not completed)</span>
+        {% endif %}
+    </li>
+    {% endfor %}
+</ul>
+{% if certificate %}
+<div class="alert alert-success" role="status">
+    <span aria-hidden="true">🎓</span> Congratulations! You completed this course and earned a certificate on {{ certificate.issued_at|date:"F j, Y" }}.
+</div>
+{% endif %}
+<a href="{% url 'courses:course_detail' course.pk %}" class="btn btn-link">Back to course</a>
+{% endblock %}

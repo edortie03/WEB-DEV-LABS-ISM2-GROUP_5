@@ -1,0 +1,57 @@
+{% extends "base.html" %}
+{% block title %}{{ course.title }}{% endblock %}
+{% block content %}
+<h1>{{ course.title }}</h1>
+<p>{{ course.description }}</p>
+<p class="text-muted">Instructor: {{ course.instructor.username }}</p>
+
+{% if is_owner %}
+    <div class="mb-3">
+        <a href="{% url 'courses:lesson_create' course.pk %}" class="btn btn-sm btn-secondary">Add Lesson</a>
+        <a href="{% url 'quizzes:quiz_create' course.pk %}" class="btn btn-sm btn-secondary">Add Quiz</a>
+    </div>
+{% elif not is_enrolled %}
+    <form method="post" action="{% url 'courses:enroll' course.pk %}" class="mb-3">
+        {% csrf_token %}
+        <button type="submit" class="btn btn-primary">Enroll in this course</button>
+    </form>
+{% else %}
+    <a href="{% url 'progress:course_progress' course.pk %}" class="btn btn-sm btn-outline-primary mb-3">View Progress</a>
+{% endif %}
+
+{% if is_enrolled or is_owner %}
+<section aria-labelledby="lessons-heading">
+    <h2 id="lessons-heading">Lessons</h2>
+    <ul class="list-group mb-4">
+        {% for lesson in lessons %}
+        <li class="list-group-item lesson-item">
+            <h3 class="h6 mb-1">{{ lesson.title }}</h3>
+            {% if lesson.pdf %}
+                <p class="mb-1">
+                    <a href="{{ lesson.pdf.url }}" target="_blank" rel="noopener">
+                        Open PDF material <span class="visually-hidden">for {{ lesson.title }} (opens in a new tab)</span>
+                    </a>
+                </p>
+            {% endif %}
+            {% if lesson.content %}<p class="mb-1">{{ lesson.content }}</p>{% endif %}
+            {% if is_enrolled %}
+            <form method="post" action="{% url 'progress:mark_complete' lesson.pk %}">
+                {% csrf_token %}
+                <button type="submit" class="btn btn-sm btn-outline-success">
+                    Mark "{{ lesson.title }}" complete
+                </button>
+            </form>
+            {% endif %}
+        </li>
+        {% empty %}
+        <li class="list-group-item">No lessons yet.</li>
+        {% endfor %}
+    </ul>
+</section>
+
+<section aria-labelledby="quizzes-heading">
+    <h2 id="quizzes-heading">Quizzes</h2>
+    <a href="{% url 'quizzes:quiz_list' course.pk %}" class="btn btn-sm btn-info">View Quizzes</a>
+</section>
+{% endif %}
+{% endblock %}
