@@ -1,0 +1,45 @@
+{% extends "base.html" %}
+{% block title %}Welcome{% endblock %}
+{% block main_class %}p-0 mb-5{% endblock %}
+{% block content %}
+<section class="hero-section">
+    <div class="container">
+        <h1>Learn. Teach. Grow</h1>
+        <p class="lead">A focused e-learning platform for course creation, guided lessons, quizzes,
+            and progress tracking, built in the spirit of hardwork and real world applications.</p>
+        <div class="hero-cta d-flex justify-content-center gap-3 flex-wrap">
+            <a href="{% url 'users:register' %}" class="btn btn-primary btn-lg">Get started</a>
+            <a href="{% url 'users:login' %}" class="btn btn-outline-light btn-lg">Login</a>
+        </div>
+    </div>
+</section>
+
+<div class="container feature-cards">
+    <div class="row g-4">
+        <div class="col-md-4">
+            <div class="feature-card">
+                <div class="feature-icon" aria-hidden="true">&#128218;</div>
+                <h3>Structured courses</h3>
+                <p class="text-muted mb-0">Instructors build courses with lessons and PDF materials,
+                    organized for self-paced learning.</p>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="feature-card">
+                <div class="feature-icon" aria-hidden="true">&#9989;</div>
+                <h3>Quizzes &amp; assessment</h3>
+                <p class="text-muted mb-0">Test understanding with quizzes tied directly to each
+                    course's lessons.</p>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="feature-card">
+                <div class="feature-icon" aria-hidden="true">&#128200;</div>
+                <h3>Progress tracking</h3>
+                <p class="text-muted mb-0">Students track completed lessons and see progress
+                    through every enrolled course.</p>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}

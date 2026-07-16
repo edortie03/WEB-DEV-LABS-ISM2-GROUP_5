@@ -21,6 +21,7 @@
 {% if certificate %}
 <div class="alert alert-success" role="status">
     <span aria-hidden="true">🎓</span> Congratulations! You completed this course and earned a certificate on {{ certificate.issued_at|date:"F j, Y" }}.
+    <a href="{% url 'progress:certificate_download' course.pk %}" class="alert-link">Download your certificate (PDF)</a>
 </div>
 {% endif %}
 <a href="{% url 'courses:course_detail' course.pk %}" class="btn btn-link">Back to course</a>

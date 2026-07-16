@@ -13,6 +13,11 @@ class RegistrationForm(BootstrapFormMixin, UserCreationForm):
         model = User
         fields = ["username", "email", "role", "password1", "password2"]
 
+    def __init__(self, *args, **kwargs):
+        super().__init__(*args, **kwargs)
+        for field in self.fields.values():
+            field.help_text = None
+
 
 class LoginForm(BootstrapFormMixin, AuthenticationForm):
     pass

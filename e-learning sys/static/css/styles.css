@@ -1,5 +1,42 @@
+/* ==========================================================================
+   Cisco Networking Academy inspired theme
+   ========================================================================== */
 :root {
-    --focus-ring: 0 0 0 0.2rem rgba(13, 110, 253, 0.5);
+    /* Cisco NetAcad palette */
+    --cisco-blue: #049fd9;
+    --cisco-blue-dark: #007ab8;
+    --cisco-navy: #0d274d;
+    --cisco-navy-dark: #081a35;
+    --cisco-teal: #64bbe3;
+    --cisco-green: #6cc24a;
+    --cisco-light: #f4f9fc;
+    --cisco-gray: #4a4a4a;
+
+    --focus-ring: 0 0 0 0.2rem rgba(4, 159, 217, 0.5);
+
+    /* Bootstrap variable overrides */
+    --bs-primary: var(--cisco-blue);
+    --bs-primary-rgb: 4, 159, 217;
+    --bs-secondary: var(--cisco-navy);
+    --bs-secondary-rgb: 13, 39, 77;
+    --bs-success: var(--cisco-green);
+    --bs-success-rgb: 108, 194, 74;
+    --bs-link-color: var(--cisco-blue);
+    --bs-link-hover-color: var(--cisco-blue-dark);
+    --bs-body-font-family: "Poppins", "Inter", "Segoe UI", system-ui, -apple-system, sans-serif;
+}
+
+body {
+    font-family: "Poppins", "Inter", "Segoe UI", system-ui, -apple-system, sans-serif;
+    background-color: var(--cisco-light);
+    color: var(--cisco-gray);
+}
+
+h1, h2, h3, h4, h5, h6,
+.navbar-brand,
+.btn {
+    font-family: "Poppins", "Inter", "Segoe UI", system-ui, -apple-system, sans-serif;
+    font-weight: 600;
 }
 
 .skip-link {
@@ -8,7 +45,7 @@
     top: 0;
     z-index: 1050;
     padding: 0.5rem 1rem;
-    background: #0d6efd;
+    background: var(--cisco-blue);
     color: #fff;
     text-decoration: none;
 }
@@ -24,17 +61,52 @@ input:focus-visible,
 select:focus-visible,
 textarea:focus-visible,
 .btn:focus-visible {
-    outline: 3px solid #0d6efd;
+    outline: 3px solid var(--cisco-blue);
     outline-offset: 2px;
     box-shadow: var(--focus-ring);
 }
 
+.btn-primary {
+    background-color: var(--cisco-blue);
+    border-color: var(--cisco-blue);
+}
+
+.btn-primary:hover,
+.btn-primary:focus {
+    background-color: var(--cisco-blue-dark);
+    border-color: var(--cisco-blue-dark);
+}
+
+.btn-outline-primary {
+    color: var(--cisco-blue);
+    border-color: var(--cisco-blue);
+}
+
+.btn-outline-primary:hover {
+    background-color: var(--cisco-blue);
+    border-color: var(--cisco-blue);
+}
+
+.btn-secondary {
+    background-color: var(--cisco-navy);
+    border-color: var(--cisco-navy);
+}
+
+.btn-info {
+    background-color: var(--cisco-teal);
+    border-color: var(--cisco-teal);
+    color: var(--cisco-navy-dark);
+}
+
 .card {
-    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.08);
+    box-shadow: 0 1px 3px rgba(13, 39, 77, 0.1);
+    border: none;
+    border-radius: 0.75rem;
 }
 
 .card-title a {
     text-decoration: none;
+    color: var(--cisco-navy);
 }
 
 .lesson-item + .lesson-item {
@@ -52,4 +124,200 @@ main {
 footer {
     padding: 1.5rem 0;
     color: #6c757d;
+    background-color: #fff;
+}
+
+/* ==========================================================================
+   Navbar — card-based nav items
+   ========================================================================== */
+.navbar.bg-dash {
+    background: linear-gradient(90deg, var(--cisco-navy-dark), var(--cisco-navy));
+}
+
+.navbar-brand {
+    font-weight: 700;
+    letter-spacing: 0.02em;
+}
+
+.nav-card {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.4rem;
+    padding: 0.45rem 0.9rem;
+    background: rgba(255, 255, 255, 0.08);
+    border: 1px solid rgba(255, 255, 255, 0.16);
+    border-radius: 0.65rem;
+    color: #fff;
+    font-size: 0.9rem;
+    font-weight: 500;
+    text-decoration: none;
+    backdrop-filter: blur(6px);
+    -webkit-backdrop-filter: blur(6px);
+    transition: transform 0.15s ease, background-color 0.15s ease;
+}
+
+a.nav-card:hover,
+a.nav-card:focus {
+    background: rgba(255, 255, 255, 0.18);
+    color: #fff;
+    transform: translateY(-1px);
+}
+
+.nav-card.nav-card-user {
+    background: rgba(4, 159, 217, 0.18);
+    border-color: rgba(4, 159, 217, 0.4);
+}
+
+.nav-card.nav-card-cta {
+    background: var(--cisco-blue);
+    border-color: var(--cisco-blue);
+}
+
+.nav-card.nav-card-cta:hover {
+    background: var(--cisco-blue-dark);
+    border-color: var(--cisco-blue-dark);
+}
+
+.nav-card-form {
+    margin: 0;
+}
+
+.nav-card-form .nav-card {
+    cursor: pointer;
+}
+
+/* ==========================================================================
+   Glassmorphism auth cards
+   ========================================================================== */
+.auth-shell {
+    min-height: calc(100vh - 220px);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 3rem 1rem;
+    background:
+        radial-gradient(circle at 15% 20%, rgba(4, 159, 217, 0.35), transparent 45%),
+        radial-gradient(circle at 85% 80%, rgba(108, 194, 74, 0.25), transparent 45%),
+        linear-gradient(135deg, var(--cisco-navy-dark), var(--cisco-navy));
+}
+
+.auth-shell > * {
+    width: 100%;
+    max-width: 440px;
+}
+
+.glass-card {
+    width: 100%;
+    max-width: 440px;
+    background: rgba(255, 255, 255, 0.12);
+    border: 1px solid rgba(255, 255, 255, 0.25);
+    border-radius: 1.25rem;
+    box-shadow: 0 8px 32px rgba(4, 20, 40, 0.35);
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+    padding: 2.5rem;
+    color: #fff;
+}
+
+.glass-card h1 {
+    color: #fff;
+    font-size: 1.75rem;
+    margin-bottom: 1.5rem;
+}
+
+.glass-card .form-label {
+    color: rgba(255, 255, 255, 0.9);
+    font-weight: 500;
+}
+
+.glass-card .form-control {
+    background: rgba(255, 255, 255, 0.9);
+    border: 1px solid rgba(255, 255, 255, 0.4);
+}
+
+.glass-card .form-control:focus {
+    background: #fff;
+}
+
+.glass-card .form-text {
+    color: rgba(255, 255, 255, 0.7);
+}
+
+.glass-card p,
+.glass-card a {
+    color: rgba(255, 255, 255, 0.85);
+}
+
+.glass-card a {
+    font-weight: 600;
+    color: #fff;
+}
+
+.glass-card .btn-primary {
+    width: 100%;
+}
+
+/* ==========================================================================
+   Landing page
+   ========================================================================== */
+.hero-section {
+    background:
+        radial-gradient(circle at 20% 20%, rgba(4, 159, 217, 0.45), transparent 50%),
+        radial-gradient(circle at 80% 0%, rgba(108, 194, 74, 0.3), transparent 45%),
+        linear-gradient(135deg, var(--cisco-navy-dark), var(--cisco-navy));
+    color: #fff;
+    padding: 5rem 1rem 6rem;
+    text-align: center;
+}
+
+.hero-section h1 {
+    font-size: clamp(2rem, 4vw, 3.25rem);
+    font-weight: 700;
+    margin-bottom: 1rem;
+}
+
+.hero-section p.lead {
+    color: rgba(255, 255, 255, 0.85);
+    max-width: 640px;
+    margin: 0 auto 2rem;
+}
+
+.hero-cta .btn {
+    padding: 0.75rem 2rem;
+    border-radius: 0.65rem;
+}
+
+.feature-cards {
+    margin-top: -3.5rem;
+}
+
+.feature-card {
+    background: rgba(255, 255, 255, 0.85);
+    border: 1px solid rgba(255, 255, 255, 0.5);
+    border-radius: 1rem;
+    box-shadow: 0 8px 24px rgba(13, 39, 77, 0.15);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    padding: 2rem 1.5rem;
+    height: 100%;
+    text-align: center;
+}
+
+.feature-card .feature-icon {
+    width: 3rem;
+    height: 3rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    background: rgba(4, 159, 217, 0.15);
+    color: var(--cisco-blue);
+    margin: 0 auto 1rem;
+    font-size: 1.5rem;
+}
+
+.feature-card h3 {
+    color: var(--cisco-navy);
+    font-size: 1.15rem;
 }

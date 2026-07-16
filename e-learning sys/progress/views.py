@@ -1,5 +1,8 @@
 from django.contrib.auth.decorators import login_required
+from django.http import HttpResponse
 from django.shortcuts import get_object_or_404, redirect, render
+from django.template.loader import render_to_string
+from xhtml2pdf import pisa
 
 from courses.models import Course, Lesson
 
@@ -41,3 +44,27 @@ def course_progress(request, course_pk):
             "certificate": certificate,
         },
     )
+
+
+@login_required
+def certificate_download(request, course_pk):
+    course = get_object_or_404(Course, pk=course_pk)
+    certificate = get_object_or_404(Certificate, student=request.user, course=course)
+
+    html = render_to_string(
+        "progress/certificate_pdf.html",
+        {
+            "site_name": "E-Learning Academy",
+            "student_name": request.user.get_full_name() or request.user.username,
+            "instructor_name": course.instructor.get_full_name() or course.instructor.username,
+            "course": course,
+            "issued_at": certificate.issued_at,
+        },
+    )
+
+    response = HttpResponse(content_type="application/pdf")
+    response["Content-Disposition"] = (
+        f'attachment; filename="certificate-{course.pk}-{request.user.pk}.pdf"'
+    )
+    pisa.CreatePDF(html, dest=response)
+    return response
